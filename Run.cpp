@@ -4,5 +4,5 @@
 
 int main() {
    Board board = Board();
-   board.Print();
+   board.print();
 }

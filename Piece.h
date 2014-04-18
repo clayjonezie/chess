@@ -2,6 +2,12 @@
 class Board;
 
 #include <iostream>
+#include "includes.h"
+
+struct position {
+   int x;
+   int y;
+};
 
 enum charachter {
    empty = ' ',
@@ -13,12 +19,19 @@ enum charachter {
    knight = 'k'
 };
 
+enum team {
+   dark,
+   light
+};
+
 class Piece {
 public: 
    Piece();
    Piece(enum charachter c);
-   int color;
+   team team;
    charachter charachter;
+   Board *board;
+   bool move(position start, position finish);
 };
 
 std::ostream& operator << (std::ostream& o, Piece p);

@@ -1,6 +1,5 @@
-#include "Piece.h"
-
 #include <iostream>
+#include "includes.h"
 
 Piece::Piece() {
 }
